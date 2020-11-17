@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GyDragScaleCircleView">
+        <attr name="gyhasGuideLine" format="boolean" />
+        <attr name="gyguideLineSize" format="float" />
+        <attr name="gyguideLineColor" format="integer" />
+        <attr name="gyborderSize" format="float" />
+        <attr name="gyborderColor" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DragScaleCircleView">
+        <attr name="hasGuideLine" format="boolean" />
+        <attr name="guideLineSize" format="float" />
+        <attr name="guideLineColor" format="integer" />
+        <attr name="borderSize" format="float" />
+        <attr name="borderColor" format="integer" />
+    </declare-styleable>
+</resources>

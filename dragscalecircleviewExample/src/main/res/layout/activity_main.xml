@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--尺寸可以随便设置-->
+<!--    <com.rori.zenvo.dragscalecircleview.GyDragScaleCircleView-->
+<!--        android:id="@+id/dragScaleCircleView"-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="400dp"-->
+<!--        android:clickable="true"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/img1"-->
+<!--        app:hasGuideLine="false" />-->
+
+    <com.rori.zenvo.dragscalecircleview.DragScaleCircleView
+        android:id="@+id/dragScaleCircleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img1"
+        app:hasGuideLine="false" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dragScaleCircleView"
+        android:background="#ebebeb">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/guideLineOnOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Show GuideLine" />
+
+                    <Switch
+                        android:id="@+id/guideLineSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="GuideLine Color" />
+
+                    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                        android:id="@+id/guideLineColorSeek"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:progress="1"
+                        app:dsb_max="5"
+                        app:dsb_progressColor="@color/border"
+                        app:dsb_indicatorColor="@color/border" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="GuideLine Size" />
+
+                    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                        android:id="@+id/guideLineSizeSeek"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:progress="1"
+                        app:dsb_max="8" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Border Color" />
+
+                    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                        android:id="@+id/borderColorSeek"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:progress="1"
+                        app:dsb_max="5"
+                        app:dsb_progressColor="@color/border"
+                        app:dsb_indicatorColor="@color/border" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/getCroppedImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Get cropped image" />
+
+                    <ImageView
+                        android:id="@+id/croppedImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
